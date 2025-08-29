@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JavaScript Basics, Functions, Loops & DOM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="container">
+    <h1>JS Practice Playground</h1>
+    <button id="themeBtn" class="btn">🌗 Toggle Dark Mode</button>
+  </header>
+
+  <main class="container grid">
+    <!-- =======================
+         Part 1: Basics & Conditionals
+         ======================= -->
+    <section class="card" id="part1">
+      <h2>Part 1 — Basics & Conditionals</h2>
+      <form id="userForm" class="stack">
+        <label>
+          Name:
+          <input id="nameInput" type="text" placeholder="Ada Lovelace" required />
+        </label>
+        <label>
+          Age:
+          <input id="ageInput" type="number" min="0" placeholder="18" required />
+        </label>
+        <label>
+          Favorite Number:
+          <input id="favInput" type="number" placeholder="42" required />
+        </label>
+        <button class="btn" type="submit">Analyze</button>
+      </form>
+
+      <div class="output" id="basicOutput" aria-live="polite"></div>
+    </section>
+
+    <!-- =======================
+         Part 2: Functions
+         ======================= -->
+    <section class="card" id="part2">
+      <h2>Part 2 — Functions</h2>
+      <div class="stack">
+        <div>
+          <h3>Cart Total (function + loop)</h3>
+          <p>Items: <code id="cartList"></code></p>
+          <label>
+            Tax Rate (%):
+            <input id="taxInput" type="number" step="0.01" value="8" />
+          </label>
+          <button id="totalBtn" class="btn">Calculate Total</button>
+          <div class="output" id="totalOutput"></div>
+        </div>
+
+        <div>
+          <h3>Title Formatter</h3>
+          <label>
+            Enter a title:
+            <input id="titleInput" type="text" placeholder="hello world from javascript" />
+          </label>
+          <button id="titleBtn" class="btn">Format Title Case</button>
+          <div class="output" id="titleOutput"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+         Part 3: Loops
+         ======================= -->
+    <section class="card" id="part3">
+      <h2>Part 3 — Loops</h2>
+      <div class="stack">
+        <div>
+          <h3>Countdown (for loop)</h3>
+          <label>
+            Start from:
+            <input id="countInput" type="number" value="5" />
+          </label>
+          <button id="countBtn" class="btn">Start Countdown</button>
+          <div class="output" id="countOutput"></div>
+        </div>
+
+        <div>
+          <h3>Generate Boxes (forEach + DOM create)</h3>
+          <label>
+            How many?
+            <input id="boxInput" type="number" value="6" min="1" max="30" />
+          </label>
+          <button id="boxBtn" class="btn">Generate</button>
+          <div id="boxWrap" class="box-wrap" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================
+         Part 4: DOM Interactions
+         (Buttons above already count, here’s one more)
+         ======================= -->
+    <section class="card" id="part4">
+      <h2>Part 4 — DOM Interactions</h2>
+      <p>
+        <button id="togglePart2Btn" class="btn btn-outline">
+          Toggle Part 2 Visibility
+        </button>
+      </p>
+      <p class="muted">
+        This page demonstrates: selecting elements, handling events, updating text,
+        toggling classes, and creating nodes on the fly.
+      </p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <small>© Your Name — Vanilla JS Practice</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
